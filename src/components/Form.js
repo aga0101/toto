@@ -1,4 +1,5 @@
 import React from 'react';
+import Axios from 'axios';
 
 class Form extends React.Component {
 
@@ -15,6 +16,7 @@ class Form extends React.Component {
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.subscribe = this.subscribe.bind(this);
 	
 	}
 
@@ -24,9 +26,24 @@ class Form extends React.Component {
 			isDisabled: !(this.state.name && this.state.email && this.state.message)
     })
 	}
+
+	async subscribe(newSubscribee) {
+    try {
+      await Axios.post('https://xnxm2hxmwa.execute-api.us-east-1.amazonaws.com/v1/subscribe', newSubscribee)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 	
-	handleSubmit(event) {
-		alert(`You fucking did it ${this.state.name}!`);
+	async handleSubmit(e) {
+		e.preventDefault();
+
+		await this.subscribe({
+			name: this.state.name,
+			email: this.state.email,
+			message: this.state.message
+		})
+		alert(`Thank you for caring ${this.state.name}!`);
 	}
 		
 	render() {
