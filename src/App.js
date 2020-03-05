@@ -20,7 +20,7 @@ function App() {
           <br/>
           <br/>
           <br/>
-          <h1 class="masthead-heading text-uppercase mb-0 text-white text-center">Shop &amp; Adopt</h1>
+          <h1 class="masthead-heading text-uppercase mb-0 text-white text-center">Shop To Adopt</h1>
           <div class="divider-custom divider-dark">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon">
