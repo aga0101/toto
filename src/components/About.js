@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Diagram() {
+function About() {
   return (
    <section class="page-section" id="about">
    <div class="container">
@@ -157,4 +157,4 @@ function Diagram() {
   );
 }
 
-export default Diagram; 
+export default About; 

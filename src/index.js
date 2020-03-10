@@ -1,6 +1,7 @@
 // src/index.js
 
 import React from "react";
+import { BrowserRouter , Route } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -19,14 +20,16 @@ const onRedirectCallback = appState => {
 };
 
 ReactDOM.render(
+  <BrowserRouter>
   <Auth0Provider
     domain={config.domain}
     client_id={config.clientId}
     redirect_uri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
   >
-    <App />
-  </Auth0Provider>,
+  <Route component={App} />
+  </Auth0Provider>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 
