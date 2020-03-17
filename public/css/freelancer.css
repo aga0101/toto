@@ -204,6 +204,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  
 }
 
 svg {
@@ -6205,8 +6206,11 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #1abc9c !important;
+  /* background-color: #1abc9c !important; */
+  background-image: url("../img/about/colorpalletterotate.png") !important;
+
 }
+
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -6222,6 +6226,10 @@ a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
   background-color: #1a252f !important;
+}
+
+.bg-tercary {
+  background-image: url("../img/about/colorpallette.png") !important;
 }
 
 .bg-success {
@@ -6362,6 +6370,10 @@ button.bg-dark:focus {
 
 .border-dark {
   border-color: #343a40 !important;
+}
+
+.color-change {
+  color: #002857 !important;
 }
 
 .border-white {
@@ -9329,6 +9341,7 @@ button.bg-dark:focus {
 
 .text-uppercase {
   text-transform: uppercase !important;
+  text-shadow: 0 0 3px #cd6633, 0 0 5px rgb(255, 115, 0);
 }
 
 .text-capitalize {
@@ -9361,6 +9374,7 @@ button.bg-dark:focus {
 
 .text-white {
   color: #fff !important;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
 }
 
 .text-primary {
@@ -9706,7 +9720,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 6rem;
 }
 
-.masthead .{
+.masthead {
   font-size: 2.75rem;
   line-height: 2.75rem;
 }

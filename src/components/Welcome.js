@@ -5,7 +5,7 @@ function Welcome() {
 
   return (
     <div> 
-        <header class="masthead bg-primary text-white text-center">
+        <header class="masthead bg-tercary text-white text-center">
           <div class="container d-flex align-items-center flex-column">
             <br/>
             <br/>
@@ -21,7 +21,7 @@ function Welcome() {
               </div>
               <div class="divider-custom-line"></div>
             </div>
-            <p class="masthead-subheading font-weight-light mb-0 ">LOG IN TO CONTINUE.</p>
+            <p class="masthead-subheading color-change font-weight-light mb-0">LOG IN TO CONTINUE.</p>
           </div>
         </header>
     </div>

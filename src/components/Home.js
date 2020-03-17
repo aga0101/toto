@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
+import '../App.css';
 
 const Home = () => {
   const { loading, user } = useAuth0();
@@ -10,9 +11,23 @@ const Home = () => {
 
   return (
     <Fragment>
-      <header class="masthead bg-primary text-white text-center">
-       <div class="container d-flex align-items-center flex-column">
-        <h4>Welcome, {user.name} !</h4>
+      <header class="masthead bg-tercary" style={{backgroundImage:"img/about/colorpallette.png"}}>
+       <div class="container d-flex align-items-stretch flex-row">
+         <div class="polaroid">
+           <img src="img/about/doggygoinghome.jpeg" alt="promote" style={{width:"100%"}}/>
+            <div class="containertext" style={{fontSize:"40px", fontStyle: "bold"}}>
+              <p>ADOPT</p>
+            </div>
+         </div>
+         <br/>
+         <br/>
+         <br/>
+         <div class="polaroid">
+           <img src="img/about/doggyselfie.jpeg" alt="adopt" style={{width:"100%"}}/>
+            <div class="containertext" style={{fontSize:"40px", fontStyle: "bold"}}>
+             <p>PROMOTE</p>
+            </div>
+         </div>
        </div>
       </header>
     </Fragment>
