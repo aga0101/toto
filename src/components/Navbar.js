@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth0 } from "../react-auth0-spa";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
     
@@ -20,6 +21,20 @@ function Navbar() {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"> 
+                            {isAuthenticated && 
+                            <NavLink to="/post">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/post">Post</a>
+                            </NavLink>
+                            }
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"> 
+                            {isAuthenticated && 
+                            <NavLink to="/about">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/adopt">Adopt</a>
+                            </NavLink>
+                            }
+                        </li>
                         <li class="nav-item mx-0 mx-lg-1">
                             {!isAuthenticated && (
                                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/home" onClick={() => loginWithRedirect({})}>Log in</a>    

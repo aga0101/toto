@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 
-const Profile = () => {
+const Adopt = () => {
   const { loading, user } = useAuth0();
 
   if (loading || !user) {
@@ -22,4 +22,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Adopt;

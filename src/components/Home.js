@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
+import { Link } from "react-router-dom";
 import '../App.css';
 
 const Home = () => {
@@ -14,19 +15,21 @@ const Home = () => {
       <header class="masthead bg-tercary" style={{backgroundImage:"img/about/colorpallette.png"}}>
        <div class="container d-flex align-items-stretch flex-row">
          <div class="polaroid">
-           <img src="img/about/doggygoinghome.jpeg" alt="promote" style={{width:"100%"}}/>
-            <div class="containertext" style={{fontSize:"40px", fontStyle: "bold"}}>
-              <p>ADOPT</p>
-            </div>
+            <img src="img/about/doggygoinghome.jpeg" alt="promote" style={{width:"100%"}}/>
+              <div class="containertext" style={{fontSize:"40px", fontStyle: "bold"}}>
+                <p>ADOPT</p>
+              </div>
          </div>
          <br/>
          <br/>
          <br/>
          <div class="polaroid">
+         <Link to="/post">
            <img src="img/about/doggyselfie.jpeg" alt="adopt" style={{width:"100%"}}/>
             <div class="containertext" style={{fontSize:"40px", fontStyle: "bold"}}>
-             <p>PROMOTE</p>
+             <p>POST</p>
             </div>
+          </Link>
          </div>
        </div>
       </header>
