@@ -27,10 +27,9 @@ const Shelter = db.define('shelter', {
  },
  email: {
   type: Sequelize.STRING,
-  allowNull: false,
+  allowNull: true,
   validate: {
-   isEmail: true,
-   notEmpty: true
+   isEmail: true
   }
  }
 }
