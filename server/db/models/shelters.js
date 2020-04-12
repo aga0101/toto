@@ -4,6 +4,14 @@ const Sequelize = require('sequelize');
 const db = require('../database');
 
 const Shelter = db.define('shelter', {
+ id: {
+  type: Sequelize.INTEGER,
+  primaryKey: true,
+  allowNull: false,
+  validate: {
+   notEmpty: true
+  }
+ },
  name: {
   type: Sequelize.STRING,
   allowNull: false,
@@ -28,9 +36,9 @@ const Shelter = db.define('shelter', {
  email: {
   type: Sequelize.STRING,
   allowNull: true,
-  validate: {
-   isEmail: true
-  }
+  // validate: {
+  //  isEmail: true
+  // }
  }
 }
 );

@@ -36,6 +36,11 @@ const Pet = db.define('pet', {
  description: {
   type: Sequelize.TEXT,
   allowNull: true
+ },
+ shelterId: {
+  type: Sequelize.INTEGER,
+  foreignKey: true,
+  allowNull: false,
  }
 }
 );
